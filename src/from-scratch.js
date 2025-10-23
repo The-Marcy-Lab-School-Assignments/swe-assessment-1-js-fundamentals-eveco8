@@ -34,7 +34,7 @@ const petJudger = (petBreed, petName) => {
 // ============================================
 
 const loopFromOneUpToAnother = (firstNum, secondNum) => {
-  for (i = firstNum; i < secondNum; i++) {
+  for (let i = firstNum; i < secondNum; i++) {
     console.log(i)
   }
 };
@@ -45,7 +45,7 @@ const loopFromOneUpToAnother = (firstNum, secondNum) => {
 
 const shoutEveryLetterForLoop = (str) => {
   // Your code here
-  for (i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     console.log(`${str[i].toUpperCase()}!`)
   }
 };
@@ -56,13 +56,13 @@ const shoutEveryLetterForLoop = (str) => {
 
 const letterCaseCounts = (str) => {
   // Your code here
-  let obj = {
+  const obj = {
     lowercase: 0,
     uppercase: 0,
     neither: 0
   }
 
-  for (i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (typeof str[i] === 'number') {
       obj.neither++
     } else if (str[i] === ' ') {
@@ -84,7 +84,7 @@ const letterCaseCounts = (str) => {
 // ============================================
 
 const getNamesOfGreedyGnomes = (gnomes) => {
-  greedyGnomes = []
+  let greedyGnomes = []
 
   for (let gnome of gnomes) {
     if (gnomes === 0) {
