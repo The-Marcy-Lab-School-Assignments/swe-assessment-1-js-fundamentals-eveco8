@@ -63,16 +63,15 @@ const letterCaseCounts = (str) => {
   }
 
   for (let i = 0; i < str.length; i++) {
-    if (typeof str[i] === 'number') {
-      obj.neither++
-    } else if (str[i] === ' ') {
+    if (str[i].toLowerCase() === str[i].toUpperCase()) {
+      /**
+       * if(/[A-Z]/.test(str[i]))    regular expression   *  
+       */
       obj.neither++
     } else if (str[i].toLowerCase() === str[i]) {
       obj.lowercase++
     } else if (str[i].toUpperCase() === str[i]) {
       obj.uppercase++
-    } else {
-      obj.neither++
     }
   }
   return obj
