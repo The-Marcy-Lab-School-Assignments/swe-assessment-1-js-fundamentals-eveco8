@@ -335,7 +335,7 @@ Consider the function `removeLastPurely`. It is a **pure function**.
 
 ```javascript
 const removeLastPurely = (arr) => {
-  const arr = [...arr];
+  const arrCopy = [...arr];
   arrCopy.pop();
   return arrCopy;
 }
